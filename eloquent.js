@@ -7,6 +7,23 @@ console.log(min(0, 10));
 console.log(min(0, -10));
 
 
+// Recursive isEven function, not working for negative number
+function isEven(N) {
+    function zeroOrOne(N) {
+      if (N == 0) {
+        return N % 2 == 0;
+      } else if (N == 1) {
+        return N % 2 == 0;
+      } else {
+        return zeroOrOne(N - 2);
+      }
+    }
+    return zeroOrOne(N);
+  }
+
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-3));  
 
 // Counting number of 'B' occurence in string
 /*
